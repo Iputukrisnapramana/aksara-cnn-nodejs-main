@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pengenalan Aksara Bali</title>
+
+    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="Aksara Bali Recognition" />
+    <meta
+      name="description"
+      content="Aplikasi Pengenalan Aksara Bali dengan AI dan Machine Learning"
+    />
+    <meta
+      name="keywords"
+      content="Tensorflow, Deep learning, Aksara Bali, Handwritten Recognition, Web Application, AI"
+    />
+    <!-- GoogleFont -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Calistoga|Josefin+Sans:400,700|Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100;400&family=Source+Sans+Pro:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <!-- stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/app.css" />
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/b3aed9cb07.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <link rel="icon" href="favicon.ico" />
+  </head> 
+
+  <body onload="init()">
+
+    <section id="title">
+      <h1 class="heading">Pengenalan Titi Sastra Bali</h1>
+      <p class="description">
+        Sinunggil aplikasi Pengodaran suratan tangan sastre bali sane kawangun antuk framework tensoflow lan keras. UI aplikasi kewangun angge ingkupan pekaryan lan library sekadi Node.js, npm, Bootstrap, jQuery, Ajax 
+      </p>
+      <hr />
+    </section>
+    
+    <!-- Card Buttons Section -->
+    <div class="card-buttons-wrap">
+      <a href="learn.html" class="card-button-link">
+        <div class="card-button">
+          <div class="card-image">
+            <img src="public/aksara/1_ha-a.png" alt="Belajar Aksara" />
+          </div>
+          <div class="card-text">
+            <h3>Belajar Aksara</h3>
+            <p>Pelajari cara menulis aksara Bali</p>
+          </div>
+        </div>
+      </a>
+      <a href="test.html" class="card-button-link">
+        <div class="card-button">
+          <div class="card-image">
+            <img src="public/aksara/10_la.png" alt="Uji Kemampuan" />
+          </div>
+          <div class="card-text">
+            <h3>Uji Kemampuan</h3>
+            <p>Test pengetahuan aksara Bali Anda</p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <!-- End Card Buttons Section -->
+
+    <section id="content">
+      <div class="row">
+        
+
+      </div>
+      <div class="canvasapp">
+        <div class="row">
+          <div class="leftside">
+            <div class="">
+              <canvas id="canvas-box" height="200" width="200"> </canvas>
+            </div>
+            <div class="sub-title">
+              <h2 class="aksaraHeading" id="aksara-heading">--</h2>
+              
+              
+            </div>
+            <div class="buttons-wrap">
+              <button class="button" id="generate-aksara">Start!</button>
+              <button class="button" id="predict-canvas">Predict</button>
+              <button class="button" id="clear-canvas">Clear</button>
+              
+            </div>
+        
+          </div>
+
+          <div class="predicted_output col-sm-6">
+            <h2 id="prediction_heading">Prediction</h2>
+            <h1 id="result">-</h1>
+            <p id="confidence">Confidence: -</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="instruction">
+      <div class="sub-title">
+        <h2 id="about-title">Instruction</h2>
+      </div>
+      <div class="description">
+        <p class="description">
+          Click on start button to generate Aksara. Draw Aksara on black space then click on
+          <span class="italise-highlight">Predict</span> to see predicted
+          result. Click on <span class="italise-highlight">Clear</span> to draw
+          fresh.
+        </p>
+      </div>
+      
+    </section>
+
+
+
+    <script type="text/javascript" src="js/app.js" charset="utf-8"></script>
+  </body>
+</html>

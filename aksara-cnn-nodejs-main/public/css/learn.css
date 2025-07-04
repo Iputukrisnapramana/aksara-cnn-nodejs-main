@@ -1,0 +1,48 @@
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 2rem;
+  }
+  .learning-interface .row {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  .canvas-card, .results-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 18px;
+  }
+  .card-body {
+    padding: 12px;
+  }
+  .button {
+    width: 100%;
+    max-width: 220px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 1.2rem;
+  }
+  .container {
+    padding: 0 5px;
+  }
+  .canvas-card, .results-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-bottom: 12px;
+  }
+  .card-body {
+    padding: 6px;
+  }
+  #canvas-box {
+    width: 160px;
+    height: 160px;
+  }
+  .feedback-content {
+    padding: 12px 4px;
+    max-width: 98vw;
+    font-size: 0.95rem;
+  }
+} 

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pengenalan Aksara Bali</title>
+
+    <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="Aksara Bali Recognition" />
+    <meta
+      name="description"
+      content="Aplikasi Pengenalan Aksara Bali dengan AI dan Machine Learning"
+    />
+    <meta
+      name="keywords"
+      content="Tensorflow, Deep learning, Aksara Bali, Handwritten Recognition, Web Application, AI"
+    />
+    <!-- GoogleFont -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Calistoga|Josefin+Sans:400,700|Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@700&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100;400&family=Source+Sans+Pro:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!-- stylesheet -->
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/b3aed9cb07.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+    <link rel="icon" href="favicon.ico" />
+  </head>
+
+  <body>
+    <!-- Header Section -->
+    <header class="modern-header">
+      <div class="container">
+        <div class="header-content">
+          <h1 class="main-title">Pengenalan Aksara Bali</h1>
+          <p class="subtitle">
+            Aplikasi AI untuk mengenali dan mempelajari aksara Bali dengan teknologi machine learning
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="container">
+        <!-- Feature Cards -->
+        <div class="feature-cards">
+          <div class="card-buttons-wrap">
+            <a href="/learn" class="card-button-link">
+              <div class="card-button" id="belajarBtn">
+                <div class="card-image">
+                  <div class="card-text">
+                    <h3>Belajar Aksara</h3>
+                    <p>Pelajari cara menulis aksara Bali</p>
+                  </div>
+                  <img src="learn.jpg" alt="Belajar Aksara" />
+                </div>
+              </div>
+            </a>
+            <a href="/test" class="card-button-link">
+              <div class="card-button" id="latihanBtn">
+                <div class="card-image">
+                  <div class="card-text">
+                    <h3>Uji Kemampuan</h3>
+                    <p>Test pengetahuan aksara Bali Anda</p>
+                  </div>
+                  <img src="test.jpg" alt="Uji Kemampuan" />
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Instructions -->
+        <div class="instructions-section">
+          <div class="instruction-card">
+            <div class="instruction-header">
+              <i class="fas fa-info-circle"></i>
+              <h3>Cara Menggunakan Aplikasi</h3>
+            </div>
+            <div class="instruction-content">
+              <div class="instruction-steps">
+                <div class="step">
+                  <div class="step-number">1</div>
+                  <div class="step-content">
+                    <h5>Pilih Mode</h5>
+                    <p>Klik tombol <span class="highlight">Belajar Aksara</span> untuk mempelajari cara menulis, atau <span class="highlight">Uji Kemampuan</span> untuk mengetes pengetahuan Anda.</p>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">2</div>
+                  <div class="step-content">
+                    <h5>Tulis Aksara</h5>
+                    <p>Gunakan mouse atau touch screen untuk menulis aksara Bali pada area canvas yang disediakan.</p>
+                  </div>
+                </div>
+                <div class="step">
+                  <div class="step-number">3</div>
+                  <div class="step-content">
+                    <h5>Dapatkan Feedback</h5>
+                    <p>Klik tombol prediksi untuk mendapatkan hasil analisis AI dan feedback tentang tulisan Anda.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
